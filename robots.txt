@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /contraction/
+Disallow: /contraction/admin/
+Disallow: /contraction/uploads/
+Disallow: /contraction/includes/
+Disallow: /contraction/database/
+
+Sitemap: http://localhost/contraction/sitemap.xml

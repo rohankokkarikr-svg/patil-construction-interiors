@@ -1,0 +1,96 @@
+# PHP Project .gitignore
+
+# Environment and Configuration
+.env
+.env.local
+.env.production
+config.local.php
+includes/config.local.php
+
+# Database
+*.sql
+*.db
+*.sqlite
+*.sqlite3
+database/exports/
+database/backups/
+
+# Logs
+logs/
+*.log
+error.log
+access.log
+
+# Cache and Temporary Files
+cache/
+tmp/
+temp/
+*.tmp
+*.temp
+uploads/temp/
+
+# Uploads (user uploaded files)
+uploads/*
+!uploads/.gitkeep
+
+# XAMPP and Server Files
+xampp/
+htdocs/backup/
+htdocs/old/
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Node.js (if using build tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Composer (PHP dependency manager)
+vendor/
+composer.lock
+
+# Backup Files
+*.bak
+*.backup
+*.old
+
+# Session Files
+sessions/
+*.sess
+
+# SSL Certificates
+*.pem
+*.key
+*.crt
+*.csr
+
+# Local Development
+local/
+dev/
+staging/
+
+# Testing
+tests/
+coverage/
+*.test
+*.spec
+
+# Documentation Build
+docs/build/
+
+# Sensitive Data
+passwords.txt
+secrets.txt
+private-keys.txt
+
+# Performance and Monitoring
+monitoring/
+analytics/
