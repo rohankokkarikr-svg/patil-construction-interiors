@@ -5,10 +5,37 @@
 
 // Load environment variables
 function loadEnv($file = '.env') {
+    // 1. First, load existing environment variables from the system
+    $systemEnvVars = [
+        'DB_HOST', 'DB_NAME', 'DB_USER', 'DB_PASS', 'DB_CHARSET',
+        'SITE_URL', 'SITE_NAME', 'SITE_EMAIL', 'SITE_PHONE',
+        'ADMIN_PIN', 'ADMIN_EMAIL',
+        'SMTP_HOST', 'SMTP_PORT', 'SMTP_USERNAME', 'SMTP_PASSWORD', 'SMTP_FROM_EMAIL', 'SMTP_FROM_NAME',
+        'UPLOAD_MAX_SIZE', 'UPLOAD_ALLOWED_TYPES', 'UPLOAD_PATH',
+        'SESSION_LIFETIME', 'CSRF_TOKEN_LENGTH', 'PASSWORD_MIN_LENGTH',
+        'ENVIRONMENT', 'DEBUG', 'LOG_ERRORS',
+        'RECAPTCHA_SITE_KEY', 'RECAPTCHA_SECRET_KEY', 'GOOGLE_MAPS_API_KEY',
+        'CACHE_ENABLED', 'CACHE_LIFETIME',
+        'BACKUP_ENABLED', 'BACKUP_PATH', 'BACKUP_FREQUENCY'
+    ];
+    
+    foreach ($systemEnvVars as $var) {
+        $val = getenv($var);
+        if ($val !== false) {
+            if (!defined($var)) {
+                define($var, $val);
+            }
+        }
+    }
+
     $envFile = __DIR__ . '/../' . $file;
     
+    // In Vercel or other production servers, if .env doesn't exist, we don't want to fall back to .env.example
+    // if system environment variables are already set.
     if (!file_exists($envFile)) {
-        // Fallback to example file if .env doesn't exist
+        if (getenv('VERCEL') || (defined('ENVIRONMENT') && ENVIRONMENT === 'production') || getenv('ENVIRONMENT') === 'production') {
+            return;
+        }
         $envFile = __DIR__ . '/../.env.example';
     }
     
@@ -28,7 +55,9 @@ function loadEnv($file = '.env') {
                 $value = substr($value, 1, -1);
             }
             
-            define($key, $value);
+            if (!defined($key)) {
+                define($key, $value);
+            }
         }
     }
 }
