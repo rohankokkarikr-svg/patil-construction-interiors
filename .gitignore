@@ -7,6 +7,9 @@
 config.local.php
 includes/config.local.php
 
+# Allow .env.example (template file)
+!.env.example
+
 # Database
 *.sql
 *.db
