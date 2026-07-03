@@ -330,6 +330,87 @@
       letter-spacing: 1px;
     }
     .cv-footer span { color: var(--accent-lt); }
+
+    /* ── Responsive Mobile Overrides ── */
+    @media (max-width: 767px) {
+      .page {
+        margin: 0 auto !important;
+        width: 100% !important;
+        box-shadow: none !important;
+        overflow-x: hidden !important;
+      }
+      .cv-header {
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 1.5rem !important;
+        gap: 1.2rem !important;
+      }
+      .cv-header-left {
+        width: 100% !important;
+      }
+      .cv-name {
+        font-size: 1.5rem !important;
+        text-align: center !important;
+      }
+      .cv-title {
+        font-size: 0.8rem !important;
+        letter-spacing: 1px !important;
+        text-align: center !important;
+        margin-bottom: 1.2rem !important;
+      }
+      .cv-contact-row {
+        justify-content: center !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.6rem !important;
+      }
+      .cv-contact-item {
+        font-size: 0.78rem !important;
+      }
+      .cv-monogram {
+        width: 80px !important;
+        height: 80px !important;
+        margin: 0 auto !important;
+      }
+      .cv-body {
+        grid-template-columns: 1fr !important;
+      }
+      .cv-sidebar {
+        padding: 1.5rem 1.2rem !important;
+      }
+      .cv-main {
+        padding: 1.5rem 1.2rem !important;
+      }
+      .edu-table {
+        display: block !important;
+        width: 100% !important;
+        overflow-x: auto !important;
+      }
+      .edu-table th, .edu-table td {
+        font-size: 0.75rem !important;
+        padding: 0.4rem 0.5rem !important;
+      }
+      .cv-footer {
+        font-size: 0.68rem !important;
+        line-height: 1.5 !important;
+        padding: 1rem !important;
+        word-wrap: break-word !important;
+      }
+      .no-print {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.8rem !important;
+        padding: 1rem !important;
+      }
+      .no-print a {
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0 !important;
+        text-align: center !important;
+      }
+    }
   </style>
 </head>
 <body>
