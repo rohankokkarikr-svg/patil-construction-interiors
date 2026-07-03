@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // ============================================================
 // MATERIAL CALCULATOR TOOL — tools/calculator.php
 // ============================================================
@@ -272,5 +272,5 @@ include '../includes/header.php';
 .unit-toggle-btn.active { background: var(--clr-accent); border-color: var(--clr-accent); color: #000; font-weight: 700; }
 </style>
 
-<script src="/contraction/assets/js/calculator.js"></script>
+<script src="/assets/js/calculator.js"></script>
 <?php include '../includes/footer.php'; ?>

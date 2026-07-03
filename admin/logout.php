@@ -1,9 +1,9 @@
-<?php
+﻿<?php
 // ============================================================
 // ADMIN LOGOUT — admin/logout.php
 // ============================================================
 session_start();
 session_unset();
 session_destroy();
-header('Location: /contraction/admin/login.php');
+header('Location: /admin/login.php');
 exit;

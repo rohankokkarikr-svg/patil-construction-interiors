@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // ============================================================
 // ADMIN PROJECTS — admin/projects.php
 // ============================================================
@@ -91,8 +91,8 @@ $projects = getAllProjects();
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Raleway:wght@500;600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="/contraction/assets/css/style.css">
-  <link rel="stylesheet" href="/contraction/assets/css/dark-theme.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/dark-theme.css">
   <style>
     body{background:var(--clr-bg);}
     .admin-topbar{height:64px;background:var(--clr-bg2);border-bottom:1px solid var(--clr-border);display:flex;align-items:center;padding:0 2rem;position:fixed;top:0;left:260px;right:0;z-index:50;}
@@ -104,14 +104,14 @@ $projects = getAllProjects();
 <aside class="admin-sidebar">
   <div class="px-4 mb-4"><div class="d-flex align-items-center gap-2"><span class="logo-initials sm">AC</span><span style="font-family:var(--font-heading);font-size:1rem;font-weight:700;">Admin Panel</span></div></div>
   <nav>
-    <a href="/contraction/admin/index.php"         class="admin-nav-link"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
-    <a href="/contraction/admin/projects.php"       class="admin-nav-link active"><i class="fas fa-building"></i>Projects</a>
-    <a href="/contraction/admin/certifications.php" class="admin-nav-link"><i class="fas fa-certificate"></i>Certifications</a>
-    <a href="/contraction/admin/contacts.php"       class="admin-nav-link"><i class="fas fa-envelope"></i>Messages</a>
-    <a href="/contraction/admin/appointments.php"   class="admin-nav-link"><i class="fas fa-calendar-alt"></i>Appointments</a>
+    <a href="/admin/index.php"         class="admin-nav-link"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+    <a href="/admin/projects.php"       class="admin-nav-link active"><i class="fas fa-building"></i>Projects</a>
+    <a href="/admin/certifications.php" class="admin-nav-link"><i class="fas fa-certificate"></i>Certifications</a>
+    <a href="/admin/contacts.php"       class="admin-nav-link"><i class="fas fa-envelope"></i>Messages</a>
+    <a href="/admin/appointments.php"   class="admin-nav-link"><i class="fas fa-calendar-alt"></i>Appointments</a>
     <hr style="border-color:var(--clr-border);margin:1rem 1.5rem;">
-    <a href="/contraction/index.php"  class="admin-nav-link"><i class="fas fa-external-link-alt"></i>View Site</a>
-    <a href="/contraction/admin/logout.php" class="admin-nav-link" style="color:var(--clr-error)!important;"><i class="fas fa-sign-out-alt"></i>Logout</a>
+    <a href="/index.php"  class="admin-nav-link"><i class="fas fa-external-link-alt"></i>View Site</a>
+    <a href="/admin/logout.php" class="admin-nav-link" style="color:var(--clr-error)!important;"><i class="fas fa-sign-out-alt"></i>Logout</a>
   </nav>
 </aside>
 

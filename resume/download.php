@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // ============================================================
 // RESUME DOWNLOAD — resume/download.php
 // ============================================================
@@ -22,5 +22,5 @@ if (file_exists($pdf)) {
 
 // Otherwise, redirect to the printable HTML resume
 // (user can Ctrl+P / ⌘+P → Save as PDF from browser)
-header('Location: /contraction/resume/engineer-cv.html');
+header('Location: /resume/engineer-cv.html');
 exit;

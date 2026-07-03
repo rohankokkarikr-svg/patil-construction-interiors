@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // ============================================================
 // CONFIGURATION FILE - includes/config.php
 // ============================================================
@@ -73,7 +73,7 @@ if (!defined('DB_PASS')) define('DB_PASS', '');
 if (!defined('DB_CHARSET')) define('DB_CHARSET', 'utf8mb4');
 
 // Site Configuration
-if (!defined('SITE_URL')) define('SITE_URL', 'http://localhost/contraction/');
+if (!defined('SITE_URL')) define('SITE_URL', 'http://localhost/');
 if (!defined('SITE_NAME')) define('SITE_NAME', "PATIL's Construction & Interior's");
 if (!defined('SITE_EMAIL')) define('SITE_EMAIL', 'info@patilconstruction.com');
 if (!defined('SITE_PHONE')) define('SITE_PHONE', '+91 XXXXX XXXXX');
@@ -148,7 +148,7 @@ function isProduction() {
  * Get site URL with proper protocol
  */
 function getSiteUrl() {
-    $url = env('SITE_URL', 'http://localhost/contraction/');
+    $url = env('SITE_URL', 'http://localhost/');
     return rtrim($url, '/');
 }
 

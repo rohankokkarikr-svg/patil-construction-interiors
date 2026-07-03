@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // ============================================================
 // HOME PAGE — index.php
 // ============================================================
@@ -242,7 +242,7 @@ $schema = [
   '@context' => 'https://schema.org',
   '@type' => 'WebSite',
   'name' => 'PATIL’s construction & interior’s — Civil & Structural Engineer Portfolio',
-  'url' => 'http://localhost/contraction/',
+  'url' => 'http://localhost/',
   'description' => $pageDesc,
 ];
 echo '<script type="application/ld+json">' . json_encode($schema, JSON_UNESCAPED_SLASHES) . '</script>';

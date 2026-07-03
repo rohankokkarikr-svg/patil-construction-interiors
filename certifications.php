@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // ============================================================
 // CERTIFICATIONS PAGE — certifications.php
 // ============================================================
@@ -73,7 +73,7 @@ $certs = getAllCertifications();
               <?php endif; ?>
               <?php if ($c['image_path']): ?>
                 <button class="btn-ghost cert-view-btn" style="padding:0.4rem 1rem;font-size:0.8rem;"
-                        data-img="/contraction/<?= htmlspecialchars($c['image_path']) ?>"
+                        data-img="/<?= htmlspecialchars($c['image_path']) ?>"
                         data-title="<?= htmlspecialchars($c['title']) ?>"
                         data-bs-toggle="modal" data-bs-target="#certLightbox"
                         aria-label="View certificate for <?= htmlspecialchars($c['title']) ?>">

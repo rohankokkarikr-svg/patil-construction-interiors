@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 /* ============================================================
    MAIN.JS — Nav, hamburger, typewriter, modals, search
    ============================================================ */
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.disabled  = true;
       btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending…';
       try {
-        const resp = await fetch('/contraction/includes/contact_handler.php', {
+        const resp = await fetch('/includes/contact_handler.php', {
           method: 'POST', body: new FormData(contactForm),
         });
         const data = await resp.json();

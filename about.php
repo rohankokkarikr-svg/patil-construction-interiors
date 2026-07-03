@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // ============================================================
 // ABOUT PAGE — about.php
 // ============================================================
@@ -28,7 +28,7 @@ include 'includes/header.php';
         <div class="profile-hex-wrap" style="display:inline-block;">
           <div class="hex-frame">
             <div class="hex-frame-inner">
-              <img src="/contraction/assets/images/profile/patil-profile.jpg"
+              <img src="/assets/images/profile/patil-profile.jpg"
                    alt="PATIL’s construction & interior’s — Civil Engineer professional headshot"
                    onerror="this.style.display='none'; this.parentElement.style.background='var(--clr-bg3)';">
             </div>
@@ -36,7 +36,7 @@ include 'includes/header.php';
           <div class="hex-pulse"></div>
         </div>
         <div class="mt-4">
-          <a href="/contraction/resume/download.php" class="btn-accent" id="aboutDownloadCV">
+          <a href="/resume/download.php" class="btn-accent" id="aboutDownloadCV">
             <i class="fas fa-download"></i>Download Resume
           </a>
         </div>
@@ -164,7 +164,7 @@ $schema = [
   'jobTitle' => 'Civil Engineer & Construction Specialist',
   'address'  => ['@type'=>'PostalAddress','addressLocality'=>'Gokak','addressRegion'=>'Karnataka','addressCountry'=>'IN'],
   'email'    => 'patilpradeep754@gmail.com',
-  'url'      => 'http://localhost/contraction/about.php',
+  'url'      => 'http://localhost/about.php',
 ];
 echo '<script type="application/ld+json">' . json_encode($schema, JSON_UNESCAPED_SLASHES) . '</script>';
 include 'includes/footer.php';

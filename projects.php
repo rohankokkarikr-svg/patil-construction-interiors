@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // ============================================================
 // PROJECTS PAGE — projects.php
 // ============================================================
@@ -59,10 +59,10 @@ $projects = getAllProjects();
                data-role="<?= htmlspecialchars($p['role'] ?? '') ?>"
                data-client="<?= htmlspecialchars($p['client'] ?? '') ?>"
                data-location="<?= htmlspecialchars($p['location'] ?? '') ?>"
-               data-img="/contraction/<?= htmlspecialchars($p['image_path']) ?>"
+               data-img="/<?= htmlspecialchars($p['image_path']) ?>"
                data-aos="fade-up">
             <div class="card-img-wrap">
-              <img src="/contraction/<?= htmlspecialchars($p['image_path']) ?>"
+              <img src="/<?= htmlspecialchars($p['image_path']) ?>"
                    alt="<?= htmlspecialchars($p['title']) ?>" loading="lazy"
                    onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'300\' height=\'200\' viewBox=\'0 0 300 200\'%3E%3Crect width=\'300\' height=\'200\' fill=\'%2316213E\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23F5A623\' font-size=\'40\'%3E🏗️%3C/text%3E%3C/svg%3E'">
             </div>
@@ -137,7 +137,7 @@ $projects = getAllProjects();
       </div>
       <div class="modal-footer">
         <button type="button" class="btn-ghost" data-bs-dismiss="modal">Close</button>
-        <a href="/contraction/contact.php" class="btn-accent"><i class="fas fa-envelope me-1"></i>Discuss This Project</a>
+        <a href="/contact.php" class="btn-accent"><i class="fas fa-envelope me-1"></i>Discuss This Project</a>
       </div>
     </div>
   </div>

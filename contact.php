@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // ============================================================
 // CONTACT PAGE — contact.php
 // ============================================================
@@ -215,7 +215,7 @@ document.getElementById('appointmentForm')?.addEventListener('submit', async (e)
   btn.disabled = true;
   btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Booking…';
   try {
-    const resp = await fetch('/contraction/includes/appointment_handler.php', {
+    const resp = await fetch('/includes/appointment_handler.php', {
       method: 'POST', body: new FormData(e.target),
     });
     const data = await resp.json();

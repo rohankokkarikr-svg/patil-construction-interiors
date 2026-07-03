@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // ============================================================
 // COST ESTIMATOR TOOL — tools/estimator.php
 // ============================================================
@@ -142,7 +142,7 @@ include '../includes/header.php';
           </div>
 
           <div class="d-flex gap-3 flex-wrap">
-            <a href="/contraction/contact.php?subject=Detailed+Quote+Request" class="btn-accent" id="requestQuoteBtn">
+            <a href="/contact.php?subject=Detailed+Quote+Request" class="btn-accent" id="requestQuoteBtn">
               <i class="fas fa-envelope me-2"></i>Request Detailed Quote
             </a>
             <button class="btn-outline-accent" onclick="downloadPDF()" id="downloadEstimateBtn">
@@ -167,6 +167,6 @@ include '../includes/header.php';
 .unit-toggle-btn.active { background: var(--clr-accent); border-color: var(--clr-accent); color: #000; font-weight: 700; }
 </style>
 
-<script src="/contraction/assets/js/tools.js"></script>
+<script src="/assets/js/tools.js"></script>
 
 <?php include '../includes/footer.php'; ?>

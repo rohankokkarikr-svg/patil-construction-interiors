@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // ============================================================
 // MODERN ADMIN PIN LOGIN — admin/login.php
 // ============================================================
@@ -6,7 +6,7 @@ session_start();
 require_once '../includes/db.php';
 
 if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true) {
-    header('Location: /contraction/admin/index.php'); exit;
+    header('Location: /admin/index.php'); exit;
 }
 
 $error = '';
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $_SESSION['admin_username']  = $admin['username'];
                         $_SESSION['last_login_time'] = date('H:i:s');
                         
-                        header('Location: /contraction/admin/index.php'); exit;
+                        header('Location: /admin/index.php'); exit;
                     } else {
                         // Failure
                         $db->prepare("UPDATE admin_users SET login_attempts = login_attempts + 1, last_attempt = CURRENT_TIMESTAMP WHERE id = ?")
