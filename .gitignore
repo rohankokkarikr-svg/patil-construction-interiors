@@ -23,6 +23,7 @@ database/fix_requires.js
 database/fix_admin_table.js
 database/add_favicon.js
 database/replace_branding.js
+database/inject_admin_script.js
 
 # Logs
 logs/
