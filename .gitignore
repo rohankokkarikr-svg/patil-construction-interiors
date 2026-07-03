@@ -11,12 +11,13 @@ includes/config.local.php
 !.env.example
 
 # Database
-*.sql
 *.db
 *.sqlite
 *.sqlite3
 database/exports/
 database/backups/
+database/import_railway.js
+database/railway_schema.sql
 
 # Logs
 logs/
@@ -35,6 +36,9 @@ uploads/temp/
 # Uploads (user uploaded files)
 uploads/*
 !uploads/.gitkeep
+
+# Allow all project image assets
+!assets/images/**
 
 # XAMPP and Server Files
 xampp/
@@ -97,3 +101,5 @@ private-keys.txt
 # Performance and Monitoring
 monitoring/
 analytics/
+
+.vercel
