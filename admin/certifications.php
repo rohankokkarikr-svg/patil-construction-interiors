@@ -73,6 +73,7 @@ $certs = $db->query("SELECT * FROM certifications ORDER BY issue_date DESC")->fe
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/dark-theme.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
   <style>body{background:var(--clr-bg);}.admin-topbar{height:64px;background:var(--clr-bg2);border-bottom:1px solid var(--clr-border);display:flex;align-items:center;padding:0 2rem;position:fixed;top:0;left:260px;right:0;z-index:50;}.content-area{margin-left:260px;padding:5rem 2rem 2rem;}
   .fc{background:var(--clr-bg);border:1px solid var(--clr-border);color:var(--clr-text);border-radius:8px;padding:0.7rem 1rem;width:100%;}</style>
 </head>

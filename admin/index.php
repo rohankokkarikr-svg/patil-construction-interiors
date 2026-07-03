@@ -33,7 +33,6 @@ $recentContacts = $db->query("SELECT * FROM contacts ORDER BY submitted_at DESC 
     .admin-topbar { height: 64px; background: var(--clr-bg2); border-bottom: 1px solid var(--clr-border); display: flex; align-items: center; padding: 0 2rem; position: fixed; top: 0; left: 260px; right: 0; z-index: 50; }
     .page-wrap { display: flex; min-height: 100vh; }
     .content-area { flex: 1; margin-left: 260px; padding: 5rem 2rem 2rem; }
-    @media(max-width:1024px){ .admin-sidebar{position:relative;width:100%;min-height:auto;border-right:none;border-bottom:1px solid var(--clr-border);} .content-area,.admin-topbar{margin-left:0;left:0;} .page-wrap{flex-direction:column;} }
   </style>
 </head>
 <body>
