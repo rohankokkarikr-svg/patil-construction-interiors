@@ -12,6 +12,7 @@
 /* ── Tablet (768–1024px) ── */
 @media (max-width: 1024px) {
   :root { --section-py: 4rem; }
+  html, body { overflow-x: hidden !important; width: 100% !important; }
 
   /* Navigation */
   #navMenu {
@@ -157,9 +158,10 @@
 
   /* Navigation */
   .navbar { padding: 0.5rem 0; }
-  .navbar-brand { padding: 0.3rem 0; }
-  .logo-text { font-size: 0.9rem; line-height: 1.1; }
-  .brand-patil { font-size: 1.1em; }
+  .navbar-brand { padding: 0.3rem 0; display: flex; align-items: center; max-width: 80%; }
+  .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .brand-patil { font-size: 0.95rem !important; font-weight: 800; letter-spacing: 1px; }
+  .logo-text .accent { font-size: 0.68rem; letter-spacing: 0.5px; }
 
   /* Container */
   .container { padding-left: 1rem; padding-right: 1rem; }
@@ -360,9 +362,11 @@
   .map-actions .btn { max-width: 200px; font-size: 0.75rem; }
 
   /* Navigation */
-  .logo-text { font-size: 0.8rem; }
   .navbar { padding: 0.4rem 0; }
-  .brand-patil { font-size: 1em; }
+  .navbar-brand { display: flex; align-items: center; max-width: 75%; }
+  .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .brand-patil { font-size: 0.88rem !important; font-weight: 800; letter-spacing: 0.5px; }
+  .logo-text .accent { font-size: 0.6rem; letter-spacing: 0.2px; }
 
   /* Container */
   .container { padding-left: 0.8rem; padding-right: 0.8rem; }
