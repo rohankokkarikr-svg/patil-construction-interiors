@@ -22,7 +22,7 @@ $pageName  = $pageName  ?? '';
   <meta property="og:type" content="website">
   <meta property="og:title" content="<?= htmlspecialchars($pageTitle) ?>">
   <meta property="og:description" content="<?= htmlspecialchars($pageDesc) ?>">
-  <meta property="og:image" content="/contraction/assets/images/hero/hero-bg.jpg">
+  <meta property="og:image" content="/assets/images/hero/hero-bg.jpg">
   <meta property="og:url" content="https://alexcarter.engineer<?= htmlspecialchars($_SERVER['REQUEST_URI']) ?>">
 
   <!-- Twitter Card -->
@@ -43,9 +43,9 @@ $pageName  = $pageName  ?? '';
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/contraction/assets/css/style.css">
-  <link rel="stylesheet" href="/contraction/assets/css/dark-theme.css">
-  <link rel="stylesheet" href="/contraction/assets/css/responsive.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/dark-theme.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
 </head>
 <body>
 
@@ -56,8 +56,8 @@ $pageName  = $pageName  ?? '';
 <nav id="mainNav" class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
   <div class="container">
     <!-- Logo -->
-    <a class="navbar-brand d-flex align-items-center" href="/contraction/index.php" aria-label="PATIL’s construction & interior’s Home">
-      <img src="/contraction/assets/images/hero/logo.png" alt="PATIL’s construction & interior’s Logo" style="height: 45px; width: auto; object-fit: contain; margin-right: 12px;">
+    <a class="navbar-brand d-flex align-items-center" href="/" aria-label="PATIL's construction & interior's Home">
+      <img src="/assets/images/hero/logo.png" alt="PATIL’s construction & interior’s Logo" style="height: 45px; width: auto; object-fit: contain; margin-right: 12px;">
       <span class="logo-text"><span class="brand-patil">PATIL's</span> <span class="accent">CONSTRUCTION & INTERIOR'S</span></span>
     </a>
 
@@ -72,21 +72,21 @@ $pageName  = $pageName  ?? '';
     <!-- Links -->
     <div class="navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-        <li class="nav-item"><a class="nav-link <?= $pageName==='home' ? 'active' : '' ?>" href="/contraction/index.php">Home</a></li>
-        <li class="nav-item"><a class="nav-link <?= $pageName==='about' ? 'active' : '' ?>" href="/contraction/about.php">About</a></li>
-        <li class="nav-item"><a class="nav-link <?= $pageName==='projects' ? 'active' : '' ?>" href="/contraction/projects.php">Projects</a></li>
-        <li class="nav-item"><a class="nav-link <?= $pageName==='skills' ? 'active' : '' ?>" href="/contraction/skills.php">Skills</a></li>
-        <li class="nav-item"><a class="nav-link <?= $pageName==='certifications' ? 'active' : '' ?>" href="/contraction/certifications.php">Certifications</a></li>
+        <li class="nav-item"><a class="nav-link <?= $pageName==='home' ? 'active' : '' ?>" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link <?= $pageName==='about' ? 'active' : '' ?>" href="/about.php">About</a></li>
+        <li class="nav-item"><a class="nav-link <?= $pageName==='projects' ? 'active' : '' ?>" href="/projects.php">Projects</a></li>
+        <li class="nav-item"><a class="nav-link <?= $pageName==='skills' ? 'active' : '' ?>" href="/skills.php">Skills</a></li>
+        <li class="nav-item"><a class="nav-link <?= $pageName==='certifications' ? 'active' : '' ?>" href="/certifications.php">Certifications</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle <?= in_array($pageName,['estimator','calculator']) ? 'active' : '' ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tools</a>
           <ul class="dropdown-menu nav-dropdown">
-            <li><a class="dropdown-item" href="/contraction/tools/estimator.php"><i class="fas fa-calculator me-2 accent"></i>Cost Estimator</a></li>
-            <li><a class="dropdown-item" href="/contraction/tools/calculator.php"><i class="fas fa-ruler-combined me-2 accent"></i>Material Calculator</a></li>
+            <li><a class="dropdown-item" href="/tools/estimator.php"><i class="fas fa-calculator me-2 accent"></i>Cost Estimator</a></li>
+            <li><a class="dropdown-item" href="/tools/calculator.php"><i class="fas fa-ruler-combined me-2 accent"></i>Material Calculator</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link <?= $pageName==='contact' ? 'active' : '' ?>" href="/contraction/contact.php">Contact</a></li>
+        <li class="nav-item"><a class="nav-link <?= $pageName==='contact' ? 'active' : '' ?>" href="/contact.php">Contact</a></li>
         <li class="nav-item ms-lg-2">
-          <a class="btn btn-cv" href="/contraction/resume/download.php" id="navDownloadCV">
+          <a class="btn btn-cv" href="/resume/download.php" id="navDownloadCV">
             <i class="fas fa-download me-1"></i>Download CV
           </a>
         </li>

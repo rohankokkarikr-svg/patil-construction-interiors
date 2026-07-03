@@ -22,7 +22,7 @@ ServerSignature Off
 </IfModule>
 
 # ── Deny access to sensitive files ──
-<FilesMatch "\.(sql|log|env|ini|json)$">
+<FilesMatch "\.(sql|log|env|ini)$">
   Order allow,deny
   Deny from all
 </FilesMatch>
@@ -31,4 +31,4 @@ ServerSignature Off
 php_flag display_errors off
 
 # ── Custom 404 ──
-ErrorDocument 404 /contraction/index.php
+ErrorDocument 404 /index.php

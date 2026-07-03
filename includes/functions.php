@@ -32,6 +32,7 @@ function certStatusLabel(string|null $expiry): string {
 
 function getFeaturedProjects(): array {
     $db = getDB();
+    if ($db === null) return [];
     $stmt = $db->prepare("SELECT * FROM projects WHERE is_featured = 1 ORDER BY created_at DESC LIMIT 3");
     $stmt->execute();
     return $stmt->fetchAll();
@@ -39,6 +40,7 @@ function getFeaturedProjects(): array {
 
 function getAllProjects(string $category = ''): array {
     $db = getDB();
+    if ($db === null) return [];
     if ($category && $category !== 'all') {
         $stmt = $db->prepare("SELECT * FROM projects WHERE category = ? ORDER BY created_at DESC");
         $stmt->execute([$category]);
@@ -51,6 +53,7 @@ function getAllProjects(string $category = ''): array {
 
 function getProjectById(int $id): array|false {
     $db = getDB();
+    if ($db === null) return false;
     $stmt = $db->prepare("SELECT * FROM projects WHERE id = ?");
     $stmt->execute([$id]);
     return $stmt->fetch();
@@ -58,6 +61,7 @@ function getProjectById(int $id): array|false {
 
 function getAllCertifications(): array {
     $db = getDB();
+    if ($db === null) return [];
     $stmt = $db->prepare("SELECT * FROM certifications ORDER BY issue_date DESC");
     $stmt->execute();
     return $stmt->fetchAll();
@@ -65,12 +69,14 @@ function getAllCertifications(): array {
 
 function getContactCount(bool $unread = false): int {
     $db = getDB();
+    if ($db === null) return 0;
     $sql = $unread ? "SELECT COUNT(*) FROM contacts WHERE is_read = 0" : "SELECT COUNT(*) FROM contacts";
     return (int)$db->query($sql)->fetchColumn();
 }
 
 function getProjectCount(): int {
     $db = getDB();
+    if ($db === null) return 0;
     return (int)$db->query("SELECT COUNT(*) FROM projects")->fetchColumn();
 }
 
@@ -80,7 +86,7 @@ function isAdminLoggedIn(): bool {
 
 function requireAdmin(): void {
     if (!isAdminLoggedIn()) {
-        header('Location: /contraction/admin/login.php');
+        header('Location: /admin/login.php');
         exit;
     }
 }

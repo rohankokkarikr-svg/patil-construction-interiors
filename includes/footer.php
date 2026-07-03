@@ -7,7 +7,7 @@
       <!-- ① Brand / About -->
       <div class="col-lg-4 col-md-12">
         <div class="footer-brand">
-          <img src="/contraction/assets/images/hero/logo.png"
+          <img src="/assets/images/hero/logo.png"
                alt="PATIL's construction & interior's Logo"
                style="height:52px;width:auto;object-fit:contain;">
           <span class="footer-name">
@@ -36,12 +36,12 @@
       <div class="col-lg-2 col-sm-4 col-6">
         <h4 class="footer-heading">Quick Links</h4>
         <ul class="footer-links">
-          <li><a href="/contraction/index.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Home</a></li>
-          <li><a href="/contraction/about.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>About</a></li>
-          <li><a href="/contraction/projects.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Projects</a></li>
-          <li><a href="/contraction/skills.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Skills</a></li>
-          <li><a href="/contraction/certifications.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Certifications</a></li>
-          <li><a href="/contraction/contact.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Contact</a></li>
+          <li><a href="/"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Home</a></li>
+          <li><a href="/about.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>About</a></li>
+          <li><a href="/projects.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Projects</a></li>
+          <li><a href="/skills.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Skills</a></li>
+          <li><a href="/certifications.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Certifications</a></li>
+          <li><a href="/contact.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Contact</a></li>
         </ul>
       </div>
 
@@ -49,10 +49,10 @@
       <div class="col-lg-2 col-sm-4 col-6">
         <h4 class="footer-heading">Tools</h4>
         <ul class="footer-links">
-          <li><a href="/contraction/tools/estimator.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Cost Estimator</a></li>
-          <li><a href="/contraction/tools/calculator.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Material Calc</a></li>
-          <li><a href="/contraction/contact.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Book Appointment</a></li>
-          <li><a href="/contraction/resume/download.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Download CV</a></li>
+          <li><a href="/tools/estimator.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Cost Estimator</a></li>
+          <li><a href="/tools/calculator.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Material Calc</a></li>
+          <li><a href="/contact.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Book Appointment</a></li>
+          <li><a href="/resume/download.php"><i class="fas fa-chevron-right me-1" style="font-size:0.65rem;color:var(--clr-accent);"></i>Download CV</a></li>
         </ul>
       </div>
 
@@ -73,7 +73,7 @@
             <span>Gokak, Karnataka, India</span>
           </li>
         </ul>
-        <a href="/contraction/contact.php" class="btn-accent mt-2" style="font-size:0.82rem;padding:0.6rem 1.4rem;">
+        <a href="/contact.php" class="btn-accent mt-2" style="font-size:0.82rem;padding:0.6rem 1.4rem;">
           Hire Me &nbsp;<i class="fas fa-arrow-right"></i>
         </a>
       </div>
@@ -104,7 +104,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <!-- Custom JS -->
-<script src="/contraction/assets/js/animations.js"></script>
-<script src="/contraction/assets/js/main.js"></script>
+<script src="/assets/js/animations.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>

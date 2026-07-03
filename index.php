@@ -34,10 +34,10 @@ $featuredProjects = getFeaturedProjects();
       <i class="fas fa-vr-cardboard me-2" style="color:var(--clr-accent)"></i>COMMITTED TO BUILD BETTER
     </p>
     <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
-      <a href="/contraction/projects.php" class="btn-accent" id="heroViewProjects">
+      <a href="/projects.php" class="btn-accent" id="heroViewProjects">
         <i class="fas fa-folder-open"></i>View My Projects
       </a>
-      <a href="/contraction/resume/download.php" class="btn-ghost" id="heroDownloadResume">
+      <a href="/resume/download.php" class="btn-ghost" id="heroDownloadResume">
         <i class="fas fa-download"></i>Download Resume
       </a>
     </div>
@@ -51,9 +51,8 @@ $featuredProjects = getFeaturedProjects();
     <div class="stats-grid">
       <?php
       // Fetch statistics from database
-      require_once 'includes/db.php';
       $db = getDB();
-      $stats = $db->query("SELECT * FROM site_statistics WHERE is_active = 1 ORDER BY stat_order ASC")->fetchAll();
+      $stats = $db ? $db->query("SELECT * FROM site_statistics WHERE is_active = 1 ORDER BY stat_order ASC")->fetchAll() : [];
       
       foreach ($stats as $s): ?>
         <div class="stat-card" data-aos="zoom-in">
@@ -82,9 +81,9 @@ $featuredProjects = getFeaturedProjects();
             data-tools="<?= htmlspecialchars($p['tools_used']) ?>" data-duration="<?= htmlspecialchars($p['duration']) ?>"
             data-role="<?= htmlspecialchars($p['role']) ?>" data-client="<?= htmlspecialchars($p['client']) ?>"
             data-location="<?= htmlspecialchars($p['location']) ?>"
-            data-img="/contraction/<?= htmlspecialchars($p['image_path']) ?>">
+            data-img="/<?= htmlspecialchars($p['image_path']) ?>">
             <div class="card-img-wrap">
-              <img src="/contraction/<?= htmlspecialchars($p['image_path']) ?>" alt="<?= htmlspecialchars($p['title']) ?>"
+          <img src="/<?= htmlspecialchars($p['image_path']) ?>" alt="<?= htmlspecialchars($p['title']) ?>"
                 loading="lazy">
             </div>
             <div class="card-body">
@@ -102,7 +101,7 @@ $featuredProjects = getFeaturedProjects();
       <?php endforeach; ?>
     </div>
     <div class="text-center mt-5" data-aos="fade-up">
-      <a href="/contraction/projects.php" class="btn-accent" id="viewAllProjects">
+      <a href="/projects.php" class="btn-accent" id="viewAllProjects">
         <i class="fas fa-arrow-right"></i>View All Projects
       </a>
     </div>
@@ -137,7 +136,7 @@ $featuredProjects = getFeaturedProjects();
       <?php endforeach; ?>
     </div>
     <div class="text-center mt-4" data-aos="fade-up">
-      <a href="/contraction/skills.php" class="btn-outline-accent">See All Skills <i
+      <a href="/skills.php" class="btn-outline-accent">See All Skills <i
           class="fas fa-arrow-right ms-1"></i></a>
     </div>
   </div>
@@ -160,7 +159,7 @@ $featuredProjects = getFeaturedProjects();
           <h3 class="section-title mb-3">Project Cost <span class="accent">Estimator</span></h3>
           <p>Get an instant rough cost estimate for your construction project — residential, commercial or
             infrastructure. Includes a detailed cost breakdown and pie chart.</p>
-          <a href="/contraction/tools/estimator.php" class="btn-accent mt-3" id="homeEstimatorBtn">
+          <a href="/tools/estimator.php" class="btn-accent mt-3" id="homeEstimatorBtn">
             <i class="fas fa-calculator"></i>Try Cost Estimator
           </a>
         </div>
@@ -171,7 +170,7 @@ $featuredProjects = getFeaturedProjects();
           <h3 class="section-title mb-3">Material <span class="accent">Calculator</span></h3>
           <p>Calculate quantities of concrete, bricks, steel, plaster, tiles and paint using IS-code formulas. Live
             updates, unit toggle, and downloadable results.</p>
-          <a href="/contraction/tools/calculator.php" class="btn-accent mt-3" id="homeCalcBtn">
+          <a href="/tools/calculator.php" class="btn-accent mt-3" id="homeCalcBtn">
             <i class="fas fa-ruler-combined"></i>Try Material Calc
           </a>
         </div>
@@ -230,7 +229,7 @@ $featuredProjects = getFeaturedProjects();
       </div>
       <div class="modal-footer">
         <button type="button" class="btn-ghost" data-bs-dismiss="modal">Close</button>
-        <a href="/contraction/contact.php" class="btn-accent"><i class="fas fa-envelope me-1"></i>Discuss This
+        <a href="/contact.php" class="btn-accent"><i class="fas fa-envelope me-1"></i>Discuss This
           Project</a>
       </div>
     </div>
