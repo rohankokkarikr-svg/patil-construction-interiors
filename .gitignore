@@ -20,6 +20,7 @@ database/import_railway.js
 database/railway_schema.sql
 database/strip_bom.js
 database/fix_requires.js
+database/fix_admin_table.js
 
 # Logs
 logs/
