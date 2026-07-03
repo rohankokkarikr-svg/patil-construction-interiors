@@ -42,7 +42,7 @@ $recentContacts = $db->query("SELECT * FROM contacts ORDER BY submitted_at DESC 
 <aside class="admin-sidebar">
   <div class="px-4 mb-4">
     <div class="d-flex align-items-center gap-2">
-      <span class="logo-initials sm">AC</span>
+      <img src="/assets/images/hero/logo.png" alt="Logo" style="height: 30px; width: auto; object-fit: contain; margin-right: 8px;">
       <span style="font-family:var(--font-heading);font-size:1rem;font-weight:700;">Admin Panel</span>
     </div>
   </div>

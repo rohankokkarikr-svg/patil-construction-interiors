@@ -31,7 +31,7 @@ $appts = $db->query("SELECT * FROM appointments ORDER BY preferred_date ASC, pre
 </head>
 <body>
 <aside class="admin-sidebar">
-  <div class="px-4 mb-4"><div class="d-flex align-items-center gap-2"><span class="logo-initials sm">AC</span><span style="font-family:var(--font-heading);font-size:1rem;font-weight:700;">Admin Panel</span></div></div>
+  <div class="px-4 mb-4"><div class="d-flex align-items-center gap-2"><img src="/assets/images/hero/logo.png" alt="Logo" style="height: 30px; width: auto; object-fit: contain; margin-right: 8px;"><span style="font-family:var(--font-heading);font-size:1rem;font-weight:700;">Admin Panel</span></div></div>
   <nav>
     <a href="/admin/index.php" class="admin-nav-link"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
     <a href="/admin/projects.php" class="admin-nav-link"><i class="fas fa-building"></i>Projects</a>

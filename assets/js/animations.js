@@ -63,16 +63,24 @@ document.addEventListener('DOMContentLoaded', () => {
     skillBars.forEach(bar => barObserver.observe(bar));
   }
 
-  // ── Stat counters with enhanced animations (desktop only) ──
+  // ── Stat counters with animations (fallback for mobile) ──
   const counters = document.querySelectorAll('.stat-number[data-count]');
   if (counters.length) {
     const cntObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry, index) => {
-        if (entry.isIntersecting && window.innerWidth > 768) {
+        if (entry.isIntersecting) {
           const el       = entry.target;
-          const card     = el.closest('.stat-card');
           const target   = parseInt(el.dataset.count, 10);
           const suffix   = el.dataset.suffix || '';
+          
+          if (window.innerWidth <= 768) {
+            // Immediate rendering on mobile to prevent missing data
+            el.textContent = target + suffix;
+            cntObserver.unobserve(el);
+            return;
+          }
+          
+          const card     = el.closest('.stat-card');
           const duration = 2000;
           
           // Animate the card first

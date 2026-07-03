@@ -22,6 +22,7 @@ database/strip_bom.js
 database/fix_requires.js
 database/fix_admin_table.js
 database/add_favicon.js
+database/replace_branding.js
 
 # Logs
 logs/

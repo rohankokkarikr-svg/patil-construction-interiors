@@ -242,8 +242,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <div class="spinner"></div>
     </div>
 
-    <div class="brand-icon">
-      <i class="fas fa-hard-hat"></i>
+    <div class="brand-icon" style="margin-bottom: 1.5rem;">
+      <img src="/assets/images/hero/logo.png" alt="PATIL's Logo" style="height: 60px; width: auto; object-fit: contain;">
     </div>
     <h1>Secure Access</h1>
     <p class="subtitle">Enter 4-digit site terminal PIN</p>
