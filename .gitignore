@@ -25,6 +25,8 @@ database/add_favicon.js
 database/replace_branding.js
 database/inject_admin_script.js
 database/inject_admin_css.js
+database/minify_assets.js
+database/update_references.js
 
 # Logs
 logs/

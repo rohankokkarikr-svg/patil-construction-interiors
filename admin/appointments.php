@@ -25,9 +25,9 @@ $appts = $db->query("SELECT * FROM appointments ORDER BY preferred_date ASC, pre
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/dark-theme.css">
-  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="stylesheet" href="/assets/css/style.min.css">
+  <link rel="stylesheet" href="/assets/css/dark-theme.min.css">
+  <link rel="stylesheet" href="/assets/css/responsive.min.css">
   <style>body{background:var(--clr-bg);}.admin-topbar{height:64px;background:var(--clr-bg2);border-bottom:1px solid var(--clr-border);display:flex;align-items:center;padding:0 2rem;position:fixed;top:0;left:260px;right:0;z-index:50;}.content-area{margin-left:260px;padding:5rem 2rem 2rem;}</style>
 </head>
 <body>
@@ -75,6 +75,6 @@ $appts = $db->query("SELECT * FROM appointments ORDER BY preferred_date ASC, pre
   </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/assets/js/admin.js"></script>
+<script src="/assets/js/admin.min.js"></script>
 </body>
 </html>

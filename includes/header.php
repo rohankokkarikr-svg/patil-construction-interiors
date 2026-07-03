@@ -44,9 +44,9 @@ $pageName  = $pageName  ?? '';
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/dark-theme.css">
-  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="stylesheet" href="/assets/css/style.min.css">
+  <link rel="stylesheet" href="/assets/css/dark-theme.min.css">
+  <link rel="stylesheet" href="/assets/css/responsive.min.css">
 </head>
 <body>
 
