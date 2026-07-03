@@ -3,7 +3,7 @@
 // ADMIN STATISTICS MANAGEMENT
 // ============================================================
 session_start();
-require_once '../includes/db.php';
+require_once __DIR__ . '/../includes/db.php';
 
 // Check if admin is logged in
 if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {

@@ -1,6 +1,6 @@
 <?php
 // Check current admin PIN
-require_once '../includes/db.php';
+require_once __DIR__ . '/../includes/db.php';
 $db = getDB();
 
 try {

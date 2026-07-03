@@ -1,14 +1,14 @@
-﻿<?php
+<?php
 // ============================================================
 // COST ESTIMATOR TOOL — tools/estimator.php
 // ============================================================
-require_once '../includes/db.php';
-require_once '../includes/functions.php';
+require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/functions.php';
 
 $pageTitle = 'Project Cost Estimator | PATIL’s construction & interior’s — Civil Engineer';
 $pageDesc  = 'Free construction cost estimator tool — get instant project cost estimates for residential, commercial, and infrastructure projects in India.';
 $pageName  = 'estimator';
-include '../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 
 <div class="bg-grid"></div>
@@ -169,4 +169,4 @@ include '../includes/header.php';
 
 <script src="/assets/js/tools.js"></script>
 
-<?php include '../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

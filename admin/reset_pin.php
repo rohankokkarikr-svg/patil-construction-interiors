@@ -1,6 +1,6 @@
 <?php
 // Direct PIN reset - run this to set PIN to 7676
-require_once '../includes/db.php';
+require_once __DIR__ . '/../includes/db.php';
 
 try {
     $db = getDB();

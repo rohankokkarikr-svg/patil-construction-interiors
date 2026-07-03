@@ -1,9 +1,9 @@
-﻿<?php
+<?php
 // ============================================================
 // MODERN ADMIN PIN LOGIN — admin/login.php
 // ============================================================
 session_start();
-require_once '../includes/db.php';
+require_once __DIR__ . '/../includes/db.php';
 
 if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true) {
     header('Location: /admin/index.php'); exit;

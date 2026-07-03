@@ -1,14 +1,14 @@
-﻿<?php
+<?php
 // ============================================================
 // MATERIAL CALCULATOR TOOL — tools/calculator.php
 // ============================================================
-require_once '../includes/db.php';
-require_once '../includes/functions.php';
+require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/functions.php';
 
 $pageTitle = 'Material Calculator | PATIL’s construction & interior’s — Civil Engineer';
 $pageDesc  = 'Free construction material calculator — concrete mix, brickwork, steel, plastering, tiling and paint quantity calculator using IS-code formulas.';
 $pageName  = 'calculator';
-include '../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 
 <div class="bg-grid"></div>
@@ -273,4 +273,4 @@ include '../includes/header.php';
 </style>
 
 <script src="/assets/js/calculator.js"></script>
-<?php include '../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

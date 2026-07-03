@@ -18,6 +18,8 @@ database/exports/
 database/backups/
 database/import_railway.js
 database/railway_schema.sql
+database/strip_bom.js
+database/fix_requires.js
 
 # Logs
 logs/
