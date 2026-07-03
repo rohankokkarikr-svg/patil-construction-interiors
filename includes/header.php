@@ -1,7 +1,6 @@
 <?php
 // ============================================================
-// Shared Header — includes <head>
-  <link rel="icon" type="image/png" href="/assets/images/hero/logo.png"> + nav
+// Shared Header — includes <head> + nav
 // Usage: include at top of every page, pass $pageTitle, $pageDesc
 // ============================================================
 $pageTitle = $pageTitle ?? 'PATIL’s construction & interior’s | Civil & Structural Engineer';
@@ -11,6 +10,7 @@ $pageName  = $pageName  ?? '';
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="/assets/images/hero/logo.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= htmlspecialchars($pageTitle) ?></title>
