@@ -57,9 +57,55 @@
   .map-container { padding: 1.5rem; }
   .map-container iframe { height: 400px; }
 
-  /* Admin */
-  .admin-sidebar { display: none; }
-  .admin-content { margin-left: 0 !important; }
+  /* Admin Responsive Layout */
+  .admin-sidebar {
+    position: relative !important;
+    width: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
+    padding: 1rem 0 !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--clr-border) !important;
+    z-index: 100 !important;
+  }
+  .admin-sidebar nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.3rem !important;
+    justify-content: center !important;
+    padding: 0 1rem !important;
+  }
+  .admin-nav-link {
+    padding: 0.5rem 0.8rem !important;
+    border-left: none !important;
+    border-bottom: 3px solid transparent !important;
+    font-size: 0.85rem !important;
+  }
+  .admin-nav-link.active {
+    border-bottom-color: var(--clr-accent) !important;
+    border-left-color: transparent !important;
+    background: var(--clr-accent-glow) !important;
+  }
+  .admin-topbar {
+    position: static !important;
+    width: 100% !important;
+    left: 0 !important;
+    margin-left: 0 !important;
+    padding: 1rem !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  .content-area {
+    margin-left: 0 !important;
+    padding: 1.5rem 1rem !important;
+  }
+  .admin-content {
+    margin-left: 0 !important;
+    padding: 1.5rem 1rem !important;
+  }
 }
 
 /* ── Mobile (<768px) ── */
@@ -190,8 +236,28 @@
   /* Footer */
   .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; font-size: 0.8rem; }
 
-  /* Admin */
-  .admin-content { padding: 0.8rem; }
+  /* Admin Mobile Adjustments */
+  .admin-content { padding: 0.8rem !important; }
+  .admin-topbar {
+    flex-direction: column !important;
+    gap: 0.8rem !important;
+    align-items: stretch !important;
+    text-align: center !important;
+  }
+  .admin-topbar .btn-accent {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .admin-sidebar {
+    padding: 0.8rem 0 !important;
+  }
+  .admin-sidebar nav {
+    gap: 0.2rem !important;
+  }
+  .admin-nav-link {
+    font-size: 0.78rem !important;
+    padding: 0.4rem 0.6rem !important;
+  }
 
   /* Tools */
   .estimate-range { font-size: 1.4rem; }
