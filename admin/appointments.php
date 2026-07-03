@@ -20,6 +20,7 @@ $appts = $db->query("SELECT * FROM appointments ORDER BY preferred_date ASC, pre
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="/assets/images/hero/logo.png">
   <meta charset="UTF-8"><title>Appointments | Admin</title><meta name="robots" content="noindex,nofollow">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">

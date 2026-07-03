@@ -1,6 +1,7 @@
 <?php
 // ============================================================
-// Shared Header — includes <head> + nav
+// Shared Header — includes <head>
+  <link rel="icon" type="image/png" href="/assets/images/hero/logo.png"> + nav
 // Usage: include at top of every page, pass $pageTitle, $pageDesc
 // ============================================================
 $pageTitle = $pageTitle ?? 'PATIL’s construction & interior’s | Civil & Structural Engineer';

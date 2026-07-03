@@ -21,6 +21,7 @@ database/railway_schema.sql
 database/strip_bom.js
 database/fix_requires.js
 database/fix_admin_table.js
+database/add_favicon.js
 
 # Logs
 logs/
