@@ -11,7 +11,7 @@
 }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
-  background: url('/contraction/assets/images/hero/hero-bg.jpg') center/cover no-repeat;
+  background: url('/assets/images/hero/hero-bg.jpg') center/cover no-repeat;
 }
 .hero-overlay {
   position: absolute; inset: 0; z-index: 1;
