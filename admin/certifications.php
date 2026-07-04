@@ -38,7 +38,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $ext=pathinfo($_FILES['image']['name'],PATHINFO_EXTENSION);
             $fn='cert_'.time().'_'.rand(100,999).'.'.$ext;
             $dest=__DIR__.'/../uploads/'.$fn;
-            if (move_uploaded_file($_FILES['image']['tmp_name'],$dest)) $image_path='uploads/'.$fn;
+            
+            $uploaded = false;
+            if (is_writable(__DIR__ . '/../uploads')) {
+                if (@move_uploaded_file($_FILES['image']['tmp_name'],$dest)) {
+                    $image_path='uploads/'.$fn;
+                    $uploaded = true;
+                }
+            }
+            
+            // Fallback for read-only serverless filesystems (e.g. Vercel)
+            if (!$uploaded) {
+                $fileData = @file_get_contents($_FILES['image']['tmp_name']);
+                if ($fileData !== false) {
+                    $image_path = 'data:' . $mime . ';base64,' . base64_encode($fileData);
+                }
+            }
         }
     }
 

@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `projects` (
   `description` TEXT NOT NULL,
   `category` ENUM('building','structural','infrastructure','internship') NOT NULL DEFAULT 'building',
   `tools_used` VARCHAR(500) DEFAULT NULL,
-  `image_path` VARCHAR(300) DEFAULT 'assets/images/projects/default.jpg',
+  `image_path` LONGTEXT DEFAULT NULL,
   `gallery_images` TEXT DEFAULT NULL,
   `duration` VARCHAR(100) DEFAULT NULL,
   `role` VARCHAR(150) DEFAULT NULL,
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `certifications` (
   `expiry_date` DATE DEFAULT NULL,
   `credential_id` VARCHAR(200) DEFAULT NULL,
   `verify_url` VARCHAR(500) DEFAULT NULL,
-  `image_path` VARCHAR(300) DEFAULT NULL,
+  `image_path` LONGTEXT DEFAULT NULL,
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
