@@ -48,7 +48,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Handle image upload
     $image_path = $_POST['existing_image'] ?? 'assets/images/projects/default.jpg';
-    if (!empty($_FILES['image']['name'])) {
+    if (!empty($_POST['compressed_image']) && strpos($_POST['compressed_image'], 'data:') === 0) {
+        $image_path = $_POST['compressed_image'];
+    } elseif (!empty($_FILES['image']['name'])) {
         $allowed = ['image/jpeg','image/png','image/webp','image/gif'];
         $fInfo   = finfo_open(FILEINFO_MIME_TYPE);
         $mime    = finfo_file($fInfo, $_FILES['image']['tmp_name']);
@@ -146,6 +148,7 @@ $projects = getAllProjects();
       <form method="POST" enctype="multipart/form-data">
         <?php if ($editProject): ?><input type="hidden" name="project_id" value="<?= $editProject['id'] ?>"><?php endif; ?>
         <input type="hidden" name="existing_image" value="<?= htmlspecialchars($editProject['image_path'] ?? 'assets/images/projects/default.jpg') ?>">
+        <input type="hidden" name="compressed_image" id="compressed_image">
         <div class="row g-3">
           <div class="col-sm-8">
             <label class="form-label">Title *</label>
@@ -245,5 +248,55 @@ $projects = getAllProjects();
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="/assets/js/admin.min.js"></script>
+<script>
+// Client-side image compression before upload
+document.querySelector('input[type="file"]')?.addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    
+    // Check if it's an image
+    if (!file.type.match('image.*')) return;
+    
+    const submitBtn = document.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Compressing Image...';
+    
+    const reader = new FileReader();
+    reader.onload = function(event) {
+        const img = new Image();
+        img.onload = function() {
+            const canvas = document.createElement('canvas');
+            let width = img.width;
+            let height = img.height;
+            
+            const maxDim = 800;
+            if (width > maxDim || height > maxDim) {
+                if (width > height) {
+                    height = Math.round(height * (maxDim / width));
+                    width = maxDim;
+                } else {
+                    width = Math.round(width * (maxDim / height));
+                    height = maxDim;
+                }
+            }
+            
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, width, height);
+            
+            // Compress image to JPEG at 70% quality
+            const compressedBase64 = canvas.toDataURL('image/jpeg', 0.7);
+            document.getElementById('compressed_image').value = compressedBase64;
+            
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+        };
+        img.src = event.target.result;
+    };
+    reader.readAsDataURL(file);
+});
+</script>
 </body>
 </html>
