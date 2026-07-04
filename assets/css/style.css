@@ -448,10 +448,11 @@ p  { color: var(--clr-text-muted); line-height: 1.7; font-family: var(--font-bod
 .admin-stat-icon { width: 56px; height: 56px; border-radius: 12px; background: var(--clr-accent-glow); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--clr-accent); flex-shrink: 0; }
 .admin-stat-num { font-family: var(--font-heading); font-size: 2rem; font-weight: 700; color: var(--clr-text); }
 .admin-stat-label { font-size: 0.82rem; color: var(--clr-text-muted); text-transform: uppercase; letter-spacing: 1px; }
-.admin-table th { font-family: var(--font-sub); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--clr-accent); border-color: var(--clr-border) !important; background: var(--clr-bg2); font-weight: 600; }
-.admin-table td { border-color: var(--clr-border) !important; color: var(--clr-text-muted); font-size: 0.88rem; vertical-align: middle; }
-.admin-table tbody tr { background: var(--clr-card); transition: var(--transition); }
-.admin-table tbody tr:hover { background: rgba(245,166,35,0.05); }
+.admin-table { --bs-table-bg: transparent !important; }
+.admin-table th { font-family: var(--font-sub); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--clr-accent); border-color: var(--clr-border) !important; background: var(--clr-bg2) !important; font-weight: 600; }
+.admin-table td { border-color: var(--clr-border) !important; color: var(--clr-text-muted); font-size: 0.88rem; vertical-align: middle; background-color: transparent !important; }
+.admin-table tbody tr { background-color: var(--clr-card) !important; transition: var(--transition); }
+.admin-table tbody tr:hover { background-color: rgba(245, 166, 35, 0.08) !important; }
 
 /* ── Footer ── */
 .site-footer {
