@@ -104,3 +104,11 @@ function toolBadges(string $tools): string {
     }
     return $html;
 }
+
+function get_img_src(?string $path): string {
+    if (empty($path)) return '';
+    if (strpos($path, 'data:') === 0 || strpos($path, 'http://') === 0 || strpos($path, 'https://') === 0) {
+        return $path;
+    }
+    return (strpos($path, '/') === 0) ? $path : '/' . $path;
+}

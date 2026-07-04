@@ -81,9 +81,9 @@ $featuredProjects = getFeaturedProjects();
             data-tools="<?= htmlspecialchars($p['tools_used']) ?>" data-duration="<?= htmlspecialchars($p['duration']) ?>"
             data-role="<?= htmlspecialchars($p['role']) ?>" data-client="<?= htmlspecialchars($p['client']) ?>"
             data-location="<?= htmlspecialchars($p['location']) ?>"
-            data-img="/<?= htmlspecialchars($p['image_path']) ?>">
+            data-img="<?= get_img_src($p['image_path']) ?>">
             <div class="card-img-wrap">
-          <img src="/<?= htmlspecialchars($p['image_path']) ?>" alt="<?= htmlspecialchars($p['title']) ?>"
+          <img src="<?= get_img_src($p['image_path']) ?>" alt="<?= htmlspecialchars($p['title']) ?>"
                 loading="lazy">
             </div>
             <div class="card-body">
