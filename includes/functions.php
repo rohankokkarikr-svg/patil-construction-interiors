@@ -112,3 +112,55 @@ function get_img_src(?string $path): string {
     }
     return (strpos($path, '/') === 0) ? $path : '/' . $path;
 }
+
+function compressImageToBase64(string $tmpPath, string $mimeType): string {
+    switch ($mimeType) {
+        case 'image/jpeg':
+        case 'image/jpg':
+            $src = @imagecreatefromjpeg($tmpPath);
+            break;
+        case 'image/png':
+            $src = @imagecreatefrompng($tmpPath);
+            break;
+        case 'image/webp':
+            $src = @imagecreatefromwebp($tmpPath);
+            break;
+        case 'image/gif':
+            $src = @imagecreatefromgif($tmpPath);
+            break;
+        default:
+            $src = false;
+            break;
+    }
+
+    if (!$src) {
+        $fileData = @file_get_contents($tmpPath);
+        return $fileData ? 'data:' . $mimeType . ';base64,' . base64_encode($fileData) : '';
+    }
+
+    $width = imagesx($src);
+    $height = imagesy($src);
+
+    $maxDim = 800;
+    if ($width > $maxDim || $height > $maxDim) {
+        if ($width > $height) {
+            $newWidth = $maxDim;
+            $newHeight = (int)($height * ($maxDim / $width));
+        } else {
+            $newHeight = $maxDim;
+            $newWidth = (int)($width * ($maxDim / $height));
+        }
+        
+        $dst = imagecreatetruecolor($newWidth, $newHeight);
+        imagecopyresampled($dst, $src, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
+        imagedestroy($src);
+        $src = $dst;
+    }
+
+    ob_start();
+    imagejpeg($src, null, 70);
+    $data = ob_get_clean();
+    imagedestroy($src);
+
+    return 'data:image/jpeg;base64,' . base64_encode($data);
+}

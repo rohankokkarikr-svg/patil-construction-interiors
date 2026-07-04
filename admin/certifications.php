@@ -49,10 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             // Fallback for read-only serverless filesystems (e.g. Vercel)
             if (!$uploaded) {
-                $fileData = @file_get_contents($_FILES['image']['tmp_name']);
-                if ($fileData !== false) {
-                    $image_path = 'data:' . $mime . ';base64,' . base64_encode($fileData);
-                }
+                $image_path = compressImageToBase64($_FILES['image']['tmp_name'], $mime);
             }
         }
     }
