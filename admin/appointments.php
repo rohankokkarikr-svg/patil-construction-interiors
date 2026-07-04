@@ -49,7 +49,7 @@ $appts = $db->query("SELECT * FROM appointments ORDER BY preferred_date ASC, pre
   <div class="card-custom">
     <div class="table-responsive">
       <table class="table admin-table mb-0">
-        <thead><tr><th>#</th><th>Name</th><th>Email</th><th>Project Type</th><th>Date & Time</th><th>Status</th><th>Actions</th></tr></thead>
+        <thead><tr><th>#</th><th>Name</th><th>Email</th><th>Phone</th><th>Project Type</th><th>Date & Time</th><th>Status</th><th>Actions</th></tr></thead>
         <tbody>
           <?php foreach ($appts as $a):
             $sColor = $a['status']==='confirmed' ? 'var(--clr-success)' : ($a['status']==='cancelled' ? 'var(--clr-error)' : 'var(--clr-warning)');
@@ -58,7 +58,15 @@ $appts = $db->query("SELECT * FROM appointments ORDER BY preferred_date ASC, pre
               <td><?= $a['id'] ?></td>
               <td style="color:var(--clr-text);font-weight:600;"><?= htmlspecialchars($a['name']) ?></td>
               <td><?= htmlspecialchars($a['email']) ?></td>
-              <td><?= htmlspecialchars($a['project_type'] ?: '—') ?></td>
+              <td><?= htmlspecialchars($a['phone'] ?: '—') ?></td>
+              <td>
+                <?= htmlspecialchars($a['project_type'] ?: '—') ?>
+                <?php if (!empty($a['notes'])): ?>
+                  <div style="font-size:0.78rem;color:var(--clr-text-muted);margin-top:0.25rem;" title="<?= htmlspecialchars($a['notes']) ?>">
+                    <i class="fas fa-sticky-note me-1 text-warning"></i><?= htmlspecialchars(substr($a['notes'], 0, 50)) ?><?= strlen($a['notes']) > 50 ? '...' : '' ?>
+                  </div>
+                <?php endif; ?>
+              </td>
               <td><?= date('d M Y', strtotime($a['preferred_date'])) ?> @ <?= date('h:i A', strtotime($a['preferred_time'])) ?></td>
               <td><span style="font-size:0.78rem;font-weight:700;color:<?= $sColor ?>;text-transform:uppercase;"><?= $a['status'] ?></span></td>
               <td>

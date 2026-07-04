@@ -62,7 +62,7 @@ $contacts = $db->query("SELECT * FROM contacts ORDER BY submitted_at DESC")->fet
       <div class="d-flex justify-content-between align-items-start mb-3">
         <div>
           <h3 style="font-family:var(--font-heading);font-size:1.3rem;"><?= htmlspecialchars($view['subject'] ?: '(No subject)') ?></h3>
-          <p style="color:var(--clr-text-muted);font-size:0.88rem;margin:0;">From: <strong style="color:var(--clr-accent)"><?= htmlspecialchars($view['name']) ?></strong> &lt;<?= htmlspecialchars($view['email']) ?>&gt; · <?= date('d M Y H:i', strtotime($view['submitted_at'])) ?></p>
+          <p style="color:var(--clr-text-muted);font-size:0.88rem;margin:0;">From: <strong style="color:var(--clr-accent)"><?= htmlspecialchars($view['name']) ?></strong> &lt;<?= htmlspecialchars($view['email']) ?>&gt; · Phone: <strong style="color:var(--clr-text)"><?= htmlspecialchars($view['phone'] ?: 'N/A') ?></strong> · <?= date('d M Y H:i', strtotime($view['submitted_at'])) ?></p>
         </div>
         <a href="contacts.php" class="btn-ghost" style="padding:0.4rem 1rem;font-size:0.82rem;">← Back</a>
       </div>
@@ -76,13 +76,14 @@ $contacts = $db->query("SELECT * FROM contacts ORDER BY submitted_at DESC")->fet
   <div class="card-custom">
     <div class="table-responsive">
       <table class="table admin-table mb-0">
-        <thead><tr><th>#</th><th>Name</th><th>Email</th><th>Subject</th><th>Date</th><th>Status</th><th>Actions</th></tr></thead>
+        <thead><tr><th>#</th><th>Name</th><th>Email</th><th>Phone</th><th>Subject</th><th>Date</th><th>Status</th><th>Actions</th></tr></thead>
         <tbody>
           <?php foreach ($contacts as $c): ?>
             <tr style="<?= !$c['is_read'] ? 'background:rgba(245,166,35,0.04)' : '' ?>">
               <td><?= $c['id'] ?></td>
               <td style="color:var(--clr-text);font-weight:<?= !$c['is_read'] ? '700' : '400' ?>"><?= htmlspecialchars($c['name']) ?></td>
               <td><?= htmlspecialchars($c['email']) ?></td>
+              <td><?= htmlspecialchars($c['phone'] ?: '—') ?></td>
               <td><?= htmlspecialchars(substr($c['subject'], 0, 40)) ?></td>
               <td style="font-size:0.8rem;"><?= date('d M Y', strtotime($c['submitted_at'])) ?></td>
               <td><span class="<?= $c['is_read'] ? 'badge-read' : 'badge-unread' ?>"><?= $c['is_read'] ? 'Read' : 'Unread' ?></span></td>
